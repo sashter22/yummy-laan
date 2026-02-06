@@ -27,7 +27,8 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* TENGAH: Desktop Menu - Benar-benar disembunyikan di bawah breakpoint MD */}
+        {/* --- REVISI UTAMA --- */}
+        {/* Menggabungkan Menu Desktop & Button Contact dalam satu wrapper yang benar-benar 'hidden' di mobile */}
         <div className="hidden md:flex items-center space-x-10">
           <a
             href="#home"
@@ -53,10 +54,6 @@ export default function Navbar() {
           >
             Location
           </a>
-        </div>
-
-        {/* KANAN: Contact Us Desktop */}
-        <div className="hidden md:block">
           <a
             href="#footer"
             className="bg-[#3D1A0B] text-white px-6 py-2.5 rounded-full text-xs font-black uppercase tracking-widest hover:bg-orange-600 transition-all duration-300 shadow-lg"
@@ -64,8 +61,9 @@ export default function Navbar() {
             Contact Us
           </a>
         </div>
+        {/* --- END REVISI --- */}
 
-        {/* Hamburger Button (Mobile) - Z-index tinggi agar di atas dropdown */}
+        {/* Hamburger Button (Mobile) */}
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="md:hidden text-[#3D1A0B] z-50 p-2 focus:outline-none"
@@ -84,7 +82,7 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Menu Dropdown dengan Animasi Smooth */}
+      {/* Mobile Menu Dropdown */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
