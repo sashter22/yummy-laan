@@ -24,8 +24,8 @@ export default function Footer() {
               Stay Sweet!
             </h3>
             <p className="text-orange-100/60 text-base md:text-lg italic leading-relaxed">
-              "Karena setiap hari berhak mendapatkan{" "}
-              <br className="hidden md:block" /> sedikit rasa manis."
+              "Bikin momen kumpul keluarga jadi lebih manis{" "}
+              <br className="hidden md:block" /> dan tak terlupakan."
             </p>
           </div>
         </div>
