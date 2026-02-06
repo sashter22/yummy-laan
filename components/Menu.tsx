@@ -63,7 +63,7 @@ export default function Menu() {
           </h2>
           <div className="h-1.5 w-20 bg-orange-500 mx-auto rounded-full"></div>
           <p className="mt-4 text-[#3D1A0B]/60 font-medium text-sm md:text-base">
-            Tersedia dalam ukuran Cup dan Loyang Premium
+            Tersedia dalam ukuran Cup dan Loyang
           </p>
         </motion.div>
 
