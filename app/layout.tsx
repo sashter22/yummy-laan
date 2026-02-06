@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-// SEO
+// SEO COMBINED
 export const metadata: Metadata = {
   title:
     "Yummy.Laan | Brownies Lumer Premium Karanggan, Gunung Putri, Kabupaten Bogor",
@@ -28,16 +28,19 @@ export const metadata: Metadata = {
     "Brownies Lumer",
   ],
   authors: [{ name: "Yummy.Laan" }],
-  viewport: "width=device-width, initial-scale=1",
+  // PINDAHKAN KODE VERIFIKASI KE SINI
+  verification: {
+    google: "C7DTJi-DYv2phdD54oMvnPeDwqg86AaYDF0Hj2Fk2lY",
+  },
   robots: "index, follow",
   openGraph: {
     title: "Yummy.Laan - Brownies Lumer Premium",
     description: "Cemilan manis terbaik di Bogor. Cek menu kami sekarang!",
-    url: "https://yummy-laan.vercel.app", // domain
+    url: "https://yummy-laan.vercel.app",
     siteName: "Yummy.Laan",
     images: [
       {
-        url: "/img/logo.png", // Muncul pas dishare di WA/Social Media
+        url: "/img/logo.png",
         width: 800,
         height: 600,
         alt: "Logo Yummy.Laan",
@@ -55,8 +58,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id">
-      {" "}
-      {/* Ganti ke id */}
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
