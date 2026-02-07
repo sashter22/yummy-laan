@@ -2,8 +2,8 @@
 import { motion } from "framer-motion";
 
 export default function Location() {
-  const latitude = -6.451667;
-  const longitude = 106.886653;
+  const latitude = -6.45167;
+  const longitude = 106.886651;
 
   // Perbaikan link Google Maps
   const googleMapsUrl = `https://www.google.com/maps?q=${latitude},${longitude}`;
