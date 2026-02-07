@@ -120,7 +120,8 @@ export default function Menu() {
                   href={`https://wa.me/6289638727454?text=Halo Yummy.Laan, saya mau pesan ${item.nama} ${item.unit}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-4 md:mt-8 w-full bg-[#3D1A0B] text-white text-[9px] md:text-[10px] py-3 md:py-4 rounded-xl md:rounded-2xl font-black uppercase tracking-[0.1em] md:tracking-[0.2em] hover:bg-orange-600 active:scale-95 transition-all duration-300 shadow-xl shadow-orange-900/10"
+                  className="mt-4 md:mt-8 w-full bg-[#3D1A0B] text-white text-[9px] md:text-[10px] py-3 md:py-4 rounded-xl md:rounded-2xl font-black uppercase tracking-[0.1em] md:tracking-[0.2em] 
+                  hover:bg-orange-600  active:bg-orange-700 active:scale-90 active:shadow-inner transition-all duration-200 shadow-xl shadow-orange-900/10 touch-manipulation"
                 >
                   Pesan
                 </a>
