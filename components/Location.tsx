@@ -9,7 +9,7 @@ export default function Location() {
   const googleMapsUrl = `https://www.google.com/maps?q=${latitude},${longitude}`;
 
   return (
-    <section id="location" className="py-24 bg-[#FFF7ED] px-6 relative z-0">
+    <section id="location" className="py-24 bg-[#FFF7ED] px-6 overflow-hidden">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* SISI KIRI: Teks Alamat dengan Animasi Fade-Up */}
