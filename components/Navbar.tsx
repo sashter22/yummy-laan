@@ -12,7 +12,7 @@ export default function Navbar() {
         style={{ height: "80px", minHeight: "80px" }}
         className="max-w-7xl mx-auto w-full flex justify-between items-center px-4 md:px-12 relative"
       >
-        {/* KIRI: Logo - Tetap pakai cara yang kaku biar nggak lonjong */}
+        {/* KIRI: Logo */}
         <div className="flex items-center gap-3 h-full overflow-hidden">
           <div
             style={{ width: "40px", height: "40px", minWidth: "40px" }}
@@ -34,29 +34,29 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* TENGAH: Desktop Menu */}
+        {/* TENGAH: Desktop Menu (Manual Link agar presisi) */}
         <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-8 whitespace-nowrap">
           <a
             href="#home"
-            className="text-[#3D1A0B]/70 hover:text-orange-600 text-sm font-bold uppercase tracking-widest"
+            className="text-[#3D1A0B]/70 hover:text-orange-600 text-sm font-bold uppercase tracking-widest transition-colors"
           >
             Home
           </a>
           <a
             href="#about"
-            className="text-[#3D1A0B]/70 hover:text-orange-600 text-sm font-bold uppercase tracking-widest"
+            className="text-[#3D1A0B]/70 hover:text-orange-600 text-sm font-bold uppercase tracking-widest transition-colors"
           >
             About Us
           </a>
           <a
             href="#gallery"
-            className="text-[#3D1A0B]/70 hover:text-orange-600 text-sm font-bold uppercase tracking-widest"
+            className="text-[#3D1A0B]/70 hover:text-orange-600 text-sm font-bold uppercase tracking-widest transition-colors"
           >
             Gallery
           </a>
           <a
             href="#location"
-            className="text-[#3D1A0B]/70 hover:text-orange-600 text-sm font-bold uppercase tracking-widest"
+            className="text-[#3D1A0B]/70 hover:text-orange-600 text-sm font-bold uppercase tracking-widest transition-colors"
           >
             Location
           </a>
@@ -73,7 +73,6 @@ export default function Navbar() {
             </a>
           </div>
 
-          {/* Hamburger Button - Pastikan Z-Index Tinggi agar tidak tertutup */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden text-[#3D1A0B] p-2 relative z-[1001]"
@@ -94,7 +93,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* MOBILE DROPDOWN - Posisikan tepat di bawah navbar dan pastikan z-index paling atas */}
+      {/* MOBILE DROPDOWN - RATA KIRI + LINK MANUAL */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -103,39 +102,44 @@ export default function Navbar() {
             exit={{ opacity: 0, y: -10 }}
             className="md:hidden absolute top-[80px] left-0 w-full bg-white border-b border-orange-100 shadow-2xl z-[1000]"
           >
-            <div className="flex flex-col p-8 space-y-6">
+            <div className="flex flex-col p-10 space-y-7 items-start">
               <a
                 href="#home"
                 onClick={() => setIsOpen(false)}
-                className="text-[#3D1A0B] font-black uppercase text-sm tracking-widest block w-full"
+                className="text-[#3D1A0B] font-black uppercase text-sm tracking-[0.25em] block w-full active:text-orange-500"
               >
                 Home
               </a>
+              {/* Di sini kuncinya: href ke #about, teksnya About Us */}
               <a
                 href="#about"
                 onClick={() => setIsOpen(false)}
-                className="text-[#3D1A0B] font-black uppercase text-sm tracking-widest block w-full"
+                className="text-[#3D1A0B] font-black uppercase text-sm tracking-[0.25em] block w-full active:text-orange-500"
               >
                 About Us
               </a>
               <a
                 href="#gallery"
                 onClick={() => setIsOpen(false)}
-                className="text-[#3D1A0B] font-black uppercase text-sm tracking-widest block w-full"
+                className="text-[#3D1A0B] font-black uppercase text-sm tracking-[0.25em] block w-full active:text-orange-500"
               >
                 Gallery
               </a>
               <a
                 href="#location"
                 onClick={() => setIsOpen(false)}
-                className="text-[#3D1A0B] font-black uppercase text-sm tracking-widest block w-full"
+                className="text-[#3D1A0B] font-black uppercase text-sm tracking-[0.25em] block w-full active:text-orange-500"
               >
                 Location
               </a>
+
+              {/* GARIS PEMBATAS TEBAL */}
+              <div className="w-12 h-[3px] bg-orange-500 rounded-full my-1"></div>
+
               <a
                 href="#footer"
                 onClick={() => setIsOpen(false)}
-                className="text-orange-600 font-black uppercase text-sm tracking-widest pt-4 border-t border-orange-50 block w-full"
+                className="text-orange-600 font-black uppercase text-sm tracking-[0.25em] block w-full py-2 active:scale-95 transition-all"
               >
                 Contact Us
               </a>
