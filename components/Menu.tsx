@@ -67,7 +67,6 @@ export default function Menu() {
           </p>
         </motion.div>
 
-        {/* Grid Menu: Gap diperkecil di mobile biar nggak lebar-lebar amat */}
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8 justify-items-center">
           {daftarMenu.map((item, index) => (
             <motion.div
@@ -82,7 +81,6 @@ export default function Menu() {
               }}
               className="group bg-white rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-orange-100 flex flex-col w-full max-w-[320px]"
             >
-              {/* Image Section: Aspect Square nahan biar nggak lonjong */}
               <div className="relative aspect-square overflow-hidden bg-gray-50">
                 <Image
                   src={item.img}
@@ -98,7 +96,6 @@ export default function Menu() {
                 </div>
               </div>
 
-              {/* Text Content: Padding dikurangin drastis di mobile (p-4) biar rapet */}
               <div className="p-4 md:p-8 text-center flex-grow flex flex-col items-center justify-between">
                 <div>
                   <h3 className="text-sm md:text-xl font-black text-[#3D1A0B] tracking-tight uppercase">
@@ -115,13 +112,17 @@ export default function Menu() {
                   </p>
                 </div>
 
-                {/* Button: mt-4 biar nggak kejauhan jaraknya sama harga */}
+                {/* REVISI TOMBOL*/}
                 <a
                   href={`https://wa.me/6289638727454?text=Halo Yummy.Laan, saya mau pesan ${item.nama} ${item.unit}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-4 md:mt-8 w-full bg-[#3D1A0B] text-white text-[9px] md:text-[10px] py-3 md:py-4 rounded-xl md:rounded-2xl font-black uppercase tracking-[0.1em] md:tracking-[0.2em] 
-                  hover:bg-orange-600  active:bg-orange-700 active:scale-90 active:shadow-inner transition-all duration-200 shadow-xl shadow-orange-900/10 touch-manipulation"
+                  className="mt-4 md:mt-8 w-full bg-[#3D1A0B] text-white text-[10px] md:text-[11px] py-3.5 md:py-4 rounded-xl md:rounded-2xl font-black uppercase tracking-widest 
+                             transition-all duration-200 
+                             hover:bg-orange-600
+                             active:bg-orange-700 active:scale-90 active:shadow-inner
+                             flex items-center justify-center
+                             touch-manipulation"
                 >
                   Pesan
                 </a>
